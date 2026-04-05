@@ -1,25 +1,23 @@
-
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/doodle
-    username: doodle
-    password: doodle
+    url: jdbc:postgresql://localhost:5432/scheduler
+    username: scheduler
+    password: scheduler
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         format_sql: true
-    show-sql: false
-
-server:
-  port: 8080
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,prometheus
+        include: health,info,prometheus,metrics
   endpoint:
     health:
       show-details: always
