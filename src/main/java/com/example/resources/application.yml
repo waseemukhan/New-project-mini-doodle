@@ -1,1 +1,25 @@
 
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/doodle
+    username: doodle
+    password: doodle
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
