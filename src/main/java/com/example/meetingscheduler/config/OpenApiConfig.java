@@ -14,6 +14,6 @@ public class OpenApiConfig {
                 .info(new Info()
                         .title("Meeting Scheduler API")
                         .version("v1")
-                        .description("Mini Doodle == like meeting scheduling service"));
+                        .description("Mini Doodle == the meeting scheduling service"));
     }
 }
