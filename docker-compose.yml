@@ -1,32 +1,22 @@
-
 version: "3.9"
 
 services:
   db:
     image: postgres:16
-    container_name: doodle-db
     environment:
-      POSTGRES_DB: doodle
-      POSTGRES_USER: doodle
-      POSTGRES_PASSWORD: doodle
+      POSTGRES_DB: scheduler
+      POSTGRES_USER: scheduler
+      POSTGRES_PASSWORD: scheduler
     ports:
       - "5432:5432"
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U doodle -d doodle"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
 
   app:
     build: .
-    container_name: doodle-app
     depends_on:
-      db:
-        condition: service_healthy
+      - db
     environment:
-      SPRINGDATASOURCEURL: jdbc:postgresql://db:5432/doodle
-      SPRINGDATASOURCEUSERNAME: doodle
-      SPRINGDATASOURCEPASSWORD: doodle
-      SPRINGJPAHIBERNATEDDLAUTO: update
+      SPRINGDATASOURCEURL: jdbc:postgresql://db:5432/scheduler
+      SPRINGDATASOURCEUSERNAME: scheduler
+      SPRINGDATASOURCEPASSWORD: scheduler
     ports:
       - "8080:8080"
