@@ -1,5 +1,4 @@
-
-package com.example.doodle.config;
+package com.example.meetingscheduler.config;
 
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -10,11 +9,11 @@ import org.springframework.context.annotation.Configuration;
 public class OpenApiConfig {
 
     @Bean
-    public OpenAPI doodleOpenAPI() {
+    public OpenAPI meetingSchedulerOpenAPI() {
         return new OpenAPI()
-            .info(new Info()
-                .title("Mini Doodle API")
-                .version("v1")
-                .description("Meeting scheduling and availability API"));
+                .info(new Info()
+                        .title("Meeting Scheduler API")
+                        .version("v1")
+                        .description("Mini Doodle == like meeting scheduling service"));
     }
 }
