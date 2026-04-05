@@ -10,8 +10,3 @@ import java.util.UUID;
 public interface UserRepository extends JpaRepository<User, UUID> {
     Optional<User> findByEmail(String email);
 }
-`
-
-`java
-public interface CalendarRepository extends JpaRepository<CalendarEntity, UUID> {
-}
