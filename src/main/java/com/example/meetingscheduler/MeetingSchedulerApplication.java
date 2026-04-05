@@ -1,6 +1,4 @@
 
-
-`java
 package com.example.meetingscheduler;
 
 import org.springframework.boot.SpringApplication;
@@ -12,4 +10,3 @@ public class MeetingSchedulerApplication {
         SpringApplication.run(MeetingSchedulerApplication.class, args);
     }
 }
-`
