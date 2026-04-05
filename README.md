@@ -2,7 +2,7 @@
 
 Meeting Scheduler
 
-Mini Doodle == the meeting scheduling backend built with Spring Boot.
+Mini Doodle == the meeting scheduling application built with Spring Boot.
 
 Features
 
