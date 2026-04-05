@@ -61,7 +61,7 @@ POST /api/users/{userId}/slots/{slotId}/meeting
   "title": "Project Sync",
   "description": "Weekly sync",
   "participants": [
-    { "email": "alice@example.com", "name": "Alice" }
+    { "email": "jammy@example.com", "name": "Jammy" }
   ]
 }
 `
